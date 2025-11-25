@@ -11,6 +11,8 @@ public class caida : MonoBehaviour
     {
         if (transform.position.y < alturaMinima)
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             SceneManager.LoadScene("Perdiste");
         }
     }
