@@ -7,6 +7,8 @@ public class volver : MonoBehaviour
 {
     public void Reiniciar()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Debug.Log("juli");
         SceneManager.LoadScene("proeycto final");
         
