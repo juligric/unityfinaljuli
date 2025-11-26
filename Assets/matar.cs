@@ -9,6 +9,7 @@ public class matar : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
+           
             SceneManager.LoadScene("Perdiste");
         }
     }
