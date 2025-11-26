@@ -96,5 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piedraPrefab: {fileID: 2711239509175645642, guid: 66c92695180f8844d8a0dec8bb771091,
     type: 3}
+  puntoDireccion: {fileID: 4181925319021741748}
   fuerza: 60
+  arco: 1.5
   intervalo: 3

@@ -2,21 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class disparosbalas : MonoBehaviour
 {
-    public float speed = 500f;    // Fuerza que se aplica
-    public float lifetime = 3f;   // Tiempo antes de destruirse
+    public GameObject bulletPrefab;
+    public Transform firePoint;
 
-    private Rigidbody rb;
-
-    void Start()
+    void Update()
     {
-        rb = GetComponent<Rigidbody>();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Shoot();
+        }
+    }
 
-        // Empuja la bala hacia adelante desde su rotación
-        rb.AddForce(transform.forward * speed);
-
-        // Destruye la bala después de un tiempo
-        Destroy(gameObject, lifetime);
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }

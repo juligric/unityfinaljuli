@@ -262,7 +262,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 8388792798703972938}
   firePoint: {fileID: 7699591645654257161}
-  fireRate: 0.25
 --- !u!114 &421044571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,12 +505,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e14c7ac1d0e96af4db3968cafdabb91d, type: 3}
---- !u!54 &2521587492074733289 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 2521587492074733289, guid: 1f9591cad002f114e9f5d82d5ebd0b95,
-    type: 3}
-  m_PrefabInstance: {fileID: 4386984653469096785}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4386984653469096785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -599,9 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74ca48490787cad44b39f182eb608827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
-  rb: {fileID: 2521587492074733289}
-  deathForce: 200
+  speed: 2
 --- !u!1001 &7180208593873390708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -674,6 +665,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7249b36870226994cbea16d3d8e9984a, type: 2}
+    - target: {fileID: 7699591645654257161, guid: 735c1c1a4237c5641b6aece62a7f7b6f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.69
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 735c1c1a4237c5641b6aece62a7f7b6f, type: 3}
 --- !u!4 &7699591645654257161 stripped
@@ -688,17 +684,3 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2466743332457157465}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8388792798703972939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8388792798703972938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4be24d98d7e348845b7b171fd324bb0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 500
-  lifetime: 3
