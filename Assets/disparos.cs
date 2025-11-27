@@ -28,9 +28,9 @@ public class disparos : MonoBehaviour
         GameObject piedra = Instantiate(piedraPrefab, puntoDireccion.position, Quaternion.identity);
         Rigidbody rb = piedra.GetComponent<Rigidbody>();
 
-        // Dirección forward + impulso vertical = arco
-        Vector3 direccion = (puntoDireccion.forward + puntoDireccion.up * arco).normalized;
+        // SOLO hacia arriba
+        Vector3 direccion = Vector3.up;
 
-        rb.velocity = direccion * fuerza;  // ← ESTO genera un arco perfecto
+        rb.velocity = direccion * fuerza;
     }
 }
